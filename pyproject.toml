@@ -5,9 +5,12 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "matplotlib>=3.11.1",
+    "numpy>=2.4.4",
     "pydantic>=2.8",
     "requests>=2.32",
     "rich>=14.0",
+    "scipy>=1.17.1",
 ]
 
 [project.optional-dependencies]
@@ -42,6 +45,10 @@ module-root = ""
 [tool.uv]
 package = true
 python-preference = "managed"
+
+[[tool.uv.index]]
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+default = true
 
 [project.scripts]
 dispatcher = "cs336_scaling.scheduler.dispatch_loop:main"
